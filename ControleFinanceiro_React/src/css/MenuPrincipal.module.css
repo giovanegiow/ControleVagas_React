@@ -1,0 +1,21 @@
+.btn {
+  background-color: #0066b8;
+  color: #ffffff;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #004d8c;
+}
+
+.divBtn {
+    display: flex;
+    justify-content: space-between;
+}
