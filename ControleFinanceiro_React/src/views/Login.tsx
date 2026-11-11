@@ -42,9 +42,9 @@ export function Login() {
                     />
                 </div>
 
-                {erroEmail && <p className='erro'>{erroEmail}</p>}
+                {erroEmail && <p className={styles.erro}>{erroEmail}</p>}
 
-                <div className='campo'>
+                <div className={styles.campo}>
                     <label htmlFor="senha">Senha</label>
                     <input
                         type="password"
@@ -55,12 +55,12 @@ export function Login() {
                     />
                 </div>
 
-                {erroSenha && <p className='erro'>{erroSenha}</p>}
+                {erroSenha && <p className={styles.erro}>{erroSenha}</p>}
 
-                <button type="submit" className='btn-entrar'>Entrar</button>
+                <button type="submit" className={styles.btnEntrar}>Entrar</button>
             </form>
 
-            <div className='links'>
+            <div className={styles.links}>
                 <a href="#">Esqueci minha senha</a>
                 <Link to="/cadastrar">Criar conta</Link>
             </div>

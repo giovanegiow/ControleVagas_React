@@ -1,4 +1,4 @@
-import '../css/LoginCadastro.css';
+import styles from '../css/LoginCadastro.module.css';
 import { Link } from 'react-router-dom'
 import { useState } from 'react';
 
@@ -48,11 +48,11 @@ export function Cadastrar(){
     }
     
     return (
-        <div className='card'>
+        <div className={styles.card}>
             <h1>Cadastrar</h1>
 
             <form onSubmit={submitCadastro}>
-                <div className='campo'>
+                <div className={styles.campo}>
                     <label htmlFor="email">E-mail</label>
                     <input
                         type="email"
@@ -63,12 +63,12 @@ export function Cadastrar(){
                     />
                 </div>
 
-                {erroEmail && <p className='erro'>{erroEmail}</p>}
+                {erroEmail && <p className={styles.erro}>{erroEmail}</p>}
 
-                <div className='campo'>
+                <div className={styles.campo}>
                     <label htmlFor="nome">Nome</label>
                     <input
-                        type="nome"
+                        type="text"
                         id="nome"
                         placeholder="Digite seu nome"
                         value={nome}
@@ -76,9 +76,9 @@ export function Cadastrar(){
                     />
                 </div>
 
-                {erroNome && <p className='erro'>{erroNome}</p>}
+                {erroNome && <p className={styles.erro}>{erroNome}</p>}
 
-                <div className='campo'>
+                <div className={styles.campo}>
                     <label htmlFor="senha">Senha</label>
                     <input
                         type="password"
@@ -89,25 +89,25 @@ export function Cadastrar(){
                     />
                 </div>
 
-                {erroSenha && <p className='erro'>{erroSenha}</p>}
+                {erroSenha && <p className={styles.erro}>{erroSenha}</p>}
 
-                <div className='campo'>
-                    <label htmlFor="senha">Confirmar Senha</label>
+                <div className={styles.campo}>
+                    <label htmlFor="confirmarSenha">Confirmar Senha</label>
                     <input
                         type="password"
-                        id="senha"
+                        id="confirmarSenha"
                         placeholder="••••••••"
                         value={confirmarSenha}
                         onChange={(e) => {setConfirmarSenha(e.target.value)}}
                     />
                 </div>
 
-                {erroConfirmarSenha && <p className='erro'>{erroConfirmarSenha}</p>}
+                {erroConfirmarSenha && <p className={styles.erro}>{erroConfirmarSenha}</p>}
 
-                <button type="submit" className='btn-entrar'>Entrar</button>
+                <button type="submit" className={styles.btnEntrar}>Cadastrar</button>
             </form>
 
-            <div className='links linkCadastro'>
+            <div className={`${styles.links} ${styles.linkCadastro}`}>
                 <Link to="/login">Já tenho uma conta</Link>
             </div>
         </div>
