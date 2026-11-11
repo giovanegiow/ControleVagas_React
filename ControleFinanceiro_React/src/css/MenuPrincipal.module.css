@@ -1,3 +1,7 @@
+body {
+  align-items: start !important;
+}
+
 .btn {
   background-color: #0066b8;
   color: #ffffff;
@@ -20,4 +24,171 @@
   flex-wrap: wrap;
   justify-content: center;
   gap: 1rem;
+}
+
+.card {
+  background: #ffffff;
+  padding: 2.75rem 2.5rem;
+  border-radius: 16px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+  width: 100%;
+  animation: entrada 0.3s ease-out;
+}
+
+@keyframes entrada {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.inputData {
+  --cor-borda: #cbd5e1;
+  --cor-borda-foco: #2563eb;
+  --cor-texto: #1e293b;
+  --cor-fundo: #ffffff;
+  --cor-erro: #dc2626;
+
+  appearance: none;
+  -webkit-appearance: none;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 220px;
+  height: 40px;
+  padding: 0 12px;
+
+  font-family: inherit;
+  font-size: 0.95rem;
+  color: var(--cor-texto);
+  background-color: var(--cor-fundo);
+
+  border: 1px solid var(--cor-borda);
+  border-radius: 8px;
+  outline: none;
+  cursor: pointer;
+
+  color-scheme: light; /* define o tema do popup nativo do calendário */
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.inputData:hover {
+  border-color: #94a3b8;
+}
+
+.inputData:focus-visible {
+  border-color: var(--cor-borda-foco);
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.2);
+}
+
+.inputData:disabled {
+  background-color: #f1f5f9;
+  color: #94a3b8;
+  cursor: not-allowed;
+}
+
+/* Só marca como inválido depois que o usuário interagiu */
+.inputData:user-invalid {
+  border-color: var(--cor-erro);
+  box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.15);
+}
+
+/* ---- Partes internas: só Chrome/Edge/Safari (WebKit/Blink) ---- */
+
+/* Ícone do calendário */
+.inputData::-webkit-calendar-picker-indicator {
+  cursor: pointer;
+  opacity: 0.6;
+  padding: 4px;
+  border-radius: 4px;
+  transition: opacity 0.15s ease, background-color 0.15s ease;
+}
+
+.inputData::-webkit-calendar-picker-indicator:hover {
+  opacity: 1;
+  background-color: #e2e8f0;
+}
+
+/* Texto dd/mm/aaaa quando está vazio */
+.inputData:invalid::-webkit-datetime-edit {
+  color: #94a3b8;
+}
+
+.intervalo {
+  display: flex;
+  align-items: center;   /* centraliza o texto do label na altura do input */
+  gap: 8px;              /* espaço entre TODOS os itens: label↔input e input↔label */
+  flex-wrap: wrap;       /* quebra a linha em tela estreita em vez de estourar */
+}
+
+.select {
+  --cor-borda: #cbd5e1;
+  --cor-borda-foco: #2563eb;
+  --cor-texto: #1e293b;
+  --cor-fundo: #ffffff;
+  --cor-erro: #dc2626;
+
+  appearance: none;
+  -webkit-appearance: none;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 220px;
+  height: 40px;
+  padding: 0 36px 0 12px; /* espaço à direita para a seta */
+
+  font-family: inherit;
+  font-size: 0.95rem;
+  color: var(--cor-texto);
+  background-color: var(--cor-fundo);
+
+  /* seta customizada (SVG inline) */
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%2364748b' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  background-size: 12px;
+
+  border: 1px solid var(--cor-borda);
+  border-radius: 8px;
+  outline: none;
+  cursor: pointer;
+
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+
+  color-scheme: light;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.select:hover {
+  border-color: #94a3b8;
+}
+
+.select:focus-visible {
+  border-color: var(--cor-borda-foco);
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.2);
+}
+
+.select:disabled {
+  background-color: #f1f5f9;
+  color: #94a3b8;
+  cursor: not-allowed;
+}
+
+.select:user-invalid {
+  border-color: var(--cor-erro);
+  box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.15);
+}
+
+/* Placeholder: texto cinza enquanto a opção vazia estiver selecionada (precisa de required) */
+.select:invalid {
+  color: #94a3b8;
+}
+
+/* Opções voltam à cor normal dentro da lista */
+.select option {
+  color: var(--cor-texto);
 }
