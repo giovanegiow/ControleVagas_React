@@ -1,3 +1,11 @@
+.bodyLoginCadastro {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+}
+
 .card {
     background: #ffffff;
     padding: 2.75rem 2.5rem;
@@ -13,6 +21,7 @@
         opacity: 0;
         transform: translateY(10px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -102,7 +111,7 @@
 }
 
 .linkCadastro {
-   justify-content: center;
+    justify-content: center;
 }
 
 .links a {

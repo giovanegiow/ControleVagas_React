@@ -27,42 +27,44 @@ export function Login() {
     }
     
     return (
-        <div className={styles.card}>
-            <h1>Entrar</h1>
+        <div className={styles.bodyLoginCadastro}>
+            <div className={styles.card}>
+                <h1>Entrar</h1>
 
-            <form onSubmit={handleSubmit}>
-                <div className={styles.campo}>
-                    <label htmlFor="email">E-mail</label>
-                    <input
-                        type="email"
-                        id="email"
-                        placeholder="seu@email.com"
-                        value={email}
-                        onChange={(e) => setEmail(e.target.value)}
-                    />
+                <form onSubmit={handleSubmit}>
+                    <div className={styles.campo}>
+                        <label htmlFor="email">E-mail</label>
+                        <input
+                            type="email"
+                            id="email"
+                            placeholder="seu@email.com"
+                            value={email}
+                            onChange={(e) => setEmail(e.target.value)}
+                        />
+                    </div>
+
+                    {erroEmail && <p className={styles.erro}>{erroEmail}</p>}
+
+                    <div className={styles.campo}>
+                        <label htmlFor="senha">Senha</label>
+                        <input
+                            type="password"
+                            id="senha"
+                            placeholder="••••••••"
+                            value={senha}
+                            onChange={(e) => setSenha(e.target.value)}
+                        />
+                    </div>
+
+                    {erroSenha && <p className={styles.erro}>{erroSenha}</p>}
+
+                    <button type="submit" className={styles.btnEntrar}>Entrar</button>
+                </form>
+
+                <div className={styles.links}>
+                    <a href="#">Esqueci minha senha</a>
+                    <Link to="/cadastrar">Criar conta</Link>
                 </div>
-
-                {erroEmail && <p className={styles.erro}>{erroEmail}</p>}
-
-                <div className={styles.campo}>
-                    <label htmlFor="senha">Senha</label>
-                    <input
-                        type="password"
-                        id="senha"
-                        placeholder="••••••••"
-                        value={senha}
-                        onChange={(e) => setSenha(e.target.value)}
-                    />
-                </div>
-
-                {erroSenha && <p className={styles.erro}>{erroSenha}</p>}
-
-                <button type="submit" className={styles.btnEntrar}>Entrar</button>
-            </form>
-
-            <div className={styles.links}>
-                <a href="#">Esqueci minha senha</a>
-                <Link to="/cadastrar">Criar conta</Link>
             </div>
         </div>
     );
