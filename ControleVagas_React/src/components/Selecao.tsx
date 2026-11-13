@@ -21,7 +21,7 @@ export function MenuSelecao() {
         <div className={styles.card}>
             <h2 className="text-2xl font-bold mb-6">Seleção de candidaturas</h2>
 
-            <div className="flex flex-wrap items-end gap-6">
+            <div className="flex flex-wrap items-end gap-3">
 
                 <div className='w-2/5'>
                     <label htmlFor="descricaoVaga" className="text-sm font-semibold text-gray-700">
@@ -114,7 +114,7 @@ export function MenuSelecao() {
                     </div>
                 </div>
 
-                <div className="flex flex-col gap-1">
+                <div className="flex flex-col gap-1 ml-auto">
                     <button
                         type="button"
                         className="h-10 px-6 rounded-lg bg-indigo-600 text-white font-semibold
