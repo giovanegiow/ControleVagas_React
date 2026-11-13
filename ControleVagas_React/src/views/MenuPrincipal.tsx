@@ -9,17 +9,17 @@ export function MenuPrincipal() {
     return (
         <div className={styles.bodyMenuPrincipal}>
             <div className={styles.divBtn}>
-                <button className={styles.btn} onClick={() => setAcao("selecionar")}>Selecionar movimentações</button>
-                <button className={styles.btn} onClick={() => setAcao("incluir")}>Incluir movimentação</button>
-                <button className={styles.btn} onClick={() => setAcao("importar")}>Importar movimentação (CSV)</button>
+                <button className={styles.btn} onClick={() => setAcao("selecionar")}>Selecionar candidaturas</button>
+                <button className={styles.btn} onClick={() => setAcao("incluir")}>Incluir candidatura</button>
+                <button className={styles.btn} onClick={() => setAcao("area")}>Área do candidato</button>
             </div>
 
             <br></br>
 
             {acao === 'selecionar' && <MenuSelecao />}
             {acao === 'incluir' && <MenuInclusao />}
-            {acao === 'importar' && (
-                <div className={styles.card}><h2>Importação de movimentação</h2></div>
+            {acao === 'area' && (
+                <div className={styles.card}><h2>Área do candidato</h2></div>
             )}
         </div>
     )
