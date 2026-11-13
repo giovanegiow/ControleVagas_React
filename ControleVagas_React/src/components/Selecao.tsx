@@ -23,25 +23,27 @@ export function MenuSelecao() {
 
             <div className="flex flex-wrap items-end gap-3">
 
-                <div className='w-2/5'>
-                    <label htmlFor="descricaoVaga" className="text-sm font-semibold text-gray-700">
-                        Descrição da vaga
-                    </label>
-                    <div className="flex items-center gap-2">
-                        <input id="descricaoVaga" type="text"
-                            className='w-full'
-                            value={descricaoVaga} onChange={(e) => setDescricaoVaga(e.target.value)} />
+                <div className="w-full flex gap-3">
+                    <div className='flex-1'>
+                        <label htmlFor="descricaoVaga" className="text-sm font-semibold text-gray-700">
+                            Descrição da vaga
+                        </label>
+                        <div className="flex items-center gap-2">
+                            <input id="descricaoVaga" type="text"
+                                className='w-full'
+                                value={descricaoVaga} onChange={(e) => setDescricaoVaga(e.target.value)} />
+                        </div>
                     </div>
-                </div>
 
-                <div className='w-2/5'>
-                    <label htmlFor="nomeEmpresa" className="text-sm font-semibold text-gray-700">
-                        Nome da empresa
-                    </label>
-                    <div className="flex items-center gap-2">
-                        <input id="nomeEmpresa" type="text"
-                            className='w-full'
-                            value={nomeEmpresa} onChange={(e) => setNomeEmpresa(e.target.value)} />
+                    <div className='flex-1'>
+                        <label htmlFor="nomeEmpresa" className="text-sm font-semibold text-gray-700">
+                            Nome da empresa
+                        </label>
+                        <div className="flex items-center gap-2">
+                            <input id="nomeEmpresa" type="text"
+                                className='w-full'
+                                value={nomeEmpresa} onChange={(e) => setNomeEmpresa(e.target.value)} />
+                        </div>
                     </div>
                 </div>
                 
@@ -64,7 +66,7 @@ export function MenuSelecao() {
                     <label htmlFor="status" className="text-sm font-semibold text-gray-700">
                         Status da vaga
                     </label>
-                    <select id="status" className={styles.select} value={tipo}
+                    <select id="status" className={styles.select} style={{ maxWidth: 'none' }} value={tipo}
                         onChange={(e) => setTipo(e.target.value as Status)}>
                         <option value="" selected>Todas</option>
                         <option value="AND">Em andamento</option>
@@ -78,7 +80,7 @@ export function MenuSelecao() {
                     <label htmlFor="meioContato" className="text-sm font-semibold text-gray-700">
                         Meio de contato
                     </label>
-                    <select id="meioContato" className={styles.select} value={meioAbordagem}
+                    <select id="meioContato" className={styles.select} style={{ maxWidth: 'none' }} value={meioAbordagem}
                         onChange={(e) => setMeioAbordagem(e.target.value as MeioAbordagem)}>
                         <option value="" selected>Todas</option>
                         <option value="ABO">Abordagem</option>
@@ -90,7 +92,7 @@ export function MenuSelecao() {
                     <label htmlFor="modalidade" className="text-sm font-semibold text-gray-700">
                         Modalidade
                     </label>
-                    <select id="modalidade" className={styles.select} value={modalidade}
+                    <select id="modalidade" className={styles.select} style={{ maxWidth: 'none' }} value={modalidade}
                         onChange={(e) => setModalidade(e.target.value as Modalidade)}>
                         <option value="" selected>Todas</option>
                         <option value="ABO">Abordagem</option>
