@@ -48,6 +48,7 @@ export function Cadastrar(){
     }
     
     return (
+        <div className={styles.bodyLoginCadastro}>
         <div className={styles.card}>
             <h1>Cadastrar</h1>
 
@@ -110,6 +111,7 @@ export function Cadastrar(){
             <div className={`${styles.links} ${styles.linkCadastro}`}>
                 <Link to="/login">Já tenho uma conta</Link>
             </div>
+        </div>
         </div>
     )
 }
