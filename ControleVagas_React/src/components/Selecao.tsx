@@ -23,7 +23,7 @@ export function MenuSelecao() {
 
             <div className="flex flex-wrap items-end gap-3">
 
-                <div className="w-full flex gap-3">
+                <div className="w-full flex flex-col md:flex-row gap-3">
                     <div className='flex-1'>
                         <label htmlFor="descricaoVaga" className="text-sm font-semibold text-gray-700">
                             Descrição da vaga
@@ -47,22 +47,22 @@ export function MenuSelecao() {
                     </div>
                 </div>
                 
-                <div className="w-1/4">
+                <div className="w-full md:w-1/4">
                     <label htmlFor="dataInicial" className="text-sm font-semibold text-gray-700">
                         Intervalo de datas
                     </label>
-                    <div className="flex items-center gap-2">
+                    <div className="flex flex-wrap items-center gap-2">
                         <input id="dataInicial" type="text" placeholder="dd/MM/aaaa" maxLength={10}
-                            className='w-full'
+                            className='w-full md:w-auto md:flex-1 md:min-w-0'
                             value={dataInicial} onChange={(e) => setDataInicial(mascaraData(e.target.value))} />
                         <label htmlFor="dataFinal">Até</label>
                         <input id="dataFinal" type="text" placeholder="dd/MM/aaaa" maxLength={10}
-                            className='w-full'
+                            className='w-full md:w-auto md:flex-1 md:min-w-0'
                             value={dataFinal} onChange={(e) => setDataFinal(mascaraData(e.target.value))} />
                     </div>
                 </div>
 
-                <div className="w-1/5">
+                <div className="w-full md:w-1/5">
                     <label htmlFor="status" className="text-sm font-semibold text-gray-700">
                         Status da vaga
                     </label>
@@ -76,7 +76,7 @@ export function MenuSelecao() {
                     </select>
                 </div>
 
-                <div className="w-1/5">
+                <div className="w-full md:w-1/5">
                     <label htmlFor="meioContato" className="text-sm font-semibold text-gray-700">
                         Meio de contato
                     </label>
@@ -88,7 +88,7 @@ export function MenuSelecao() {
                     </select>
                 </div>
 
-                <div className="w-1/5">
+                <div className="w-full md:w-1/5">
                     <label htmlFor="modalidade" className="text-sm font-semibold text-gray-700">
                         Modalidade
                     </label>
@@ -102,22 +102,22 @@ export function MenuSelecao() {
                     </select>
                 </div>
 
-                <div className="w-1/4">
+                <div className="w-full md:w-1/4">
                     <label htmlFor="difSalario" className="text-sm font-semibold text-gray-700">
                         Valores
                     </label>
-                    <div className="flex items-center gap-2">
+                    <div className="flex flex-wrap items-center gap-2">
                         <input id="salarioInicial" type="text" placeholder="0,00"
-                            className='w-full'
+                            className='w-full md:w-auto md:flex-1 md:min-w-0'
                             value={salarioInicial} onChange={(e) => setSalarioInicial(e.target.value)} />
                         <label htmlFor="difSalario">Até</label>
                         <input id="salarioFinal" type="text" placeholder="0,00"
-                            className='w-full'
+                            className='w-full md:w-auto md:flex-1 md:min-w-0'
                             value={salarioFinal} onChange={(e) => setSalarioFinal(e.target.value)} />
                     </div>
                 </div>
 
-                <div className="flex flex-col gap-1 ml-auto">
+                <div className="w-full md:w-auto flex flex-col gap-1 md:ml-auto">
                     <button
                         type="button"
                         className="h-10 px-6 rounded-lg bg-indigo-600 text-white font-semibold
