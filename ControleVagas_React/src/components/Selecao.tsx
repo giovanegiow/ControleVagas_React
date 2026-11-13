@@ -95,9 +95,10 @@ export function MenuSelecao() {
                     <select id="modalidade" className={styles.select} style={{ maxWidth: 'none' }} value={modalidade}
                         onChange={(e) => setModalidade(e.target.value as Modalidade)}>
                         <option value="" selected>Todas</option>
-                        <option value="ABO">Abordagem</option>
-                        <option value="CAN">Candidatura</option>
-                        <option value="CAN">Candidatura</option>
+                        <option value="PRE">Presencial</option>
+                        <option value="HOM">Home office</option>
+                        <option value="SEM">Semi-presencial</option>
+                        <option value="NIF">Não informado</option>
                     </select>
                 </div>
 

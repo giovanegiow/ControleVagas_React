@@ -51,7 +51,7 @@
   }
 }
 
-input {
+input, textarea {
   --cor-borda: #cbd5e1;
   --cor-borda-foco: #2563eb;
   --cor-texto: #1e293b;

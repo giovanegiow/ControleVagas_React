@@ -1,6 +1,7 @@
 import styles from '../css/MenuPrincipal.module.css'
 import { MenuSelecao } from '../components/Selecao'
 import { MenuInclusao } from '../components/Inclusao'
+import { AreaCandidato } from '../components/AreaCandidato'
 import { useState } from 'react'
 
 export function MenuPrincipal() {
@@ -18,9 +19,7 @@ export function MenuPrincipal() {
 
             {acao === 'selecionar' && <MenuSelecao />}
             {acao === 'incluir' && <MenuInclusao />}
-            {acao === 'area' && (
-                <div className={styles.card}><h2>Área do candidato</h2></div>
-            )}
+            {acao === 'area' && <AreaCandidato />}
         </div>
     )
 }
