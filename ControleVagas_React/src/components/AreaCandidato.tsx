@@ -22,8 +22,8 @@ export function AreaCandidato() {
 
             <div className="flex flex-wrap items-end gap-3">
 
-                <div className="w-full flex gap-3">
-                    <div className='flex-1'>
+                <div className="w-full flex flex-col md:flex-row gap-3">
+                    <div className='w-full md:flex-1'>
                         <label htmlFor="nomeCompleto" className="text-sm font-semibold text-gray-700">
                             Nome completo
                         </label>
@@ -34,7 +34,7 @@ export function AreaCandidato() {
                         </div>
                     </div>
 
-                    <div className='flex-1'>
+                    <div className='w-full md:flex-1'>
                         <label htmlFor="email" className="text-sm font-semibold text-gray-700">
                             E-mail
                         </label>
@@ -46,7 +46,7 @@ export function AreaCandidato() {
                     </div>
                 </div>
 
-                <div className="w-1/5">
+                <div className="w-full md:w-1/5">
                     <label htmlFor="telefone" className="text-sm font-semibold text-gray-700">
                         Telefone
                     </label>
@@ -57,7 +57,7 @@ export function AreaCandidato() {
                     </div>
                 </div>
 
-                <div className="w-1/5">
+                <div className="w-full md:w-1/5">
                     <label htmlFor="cidade" className="text-sm font-semibold text-gray-700">
                         Cidade
                     </label>
@@ -68,7 +68,7 @@ export function AreaCandidato() {
                     </div>
                 </div>
 
-                <div className="w-1/6">
+                <div className="w-full md:w-1/6">
                     <label htmlFor="estado" className="text-sm font-semibold text-gray-700">
                         Estado (sigla)
                     </label>
@@ -79,8 +79,8 @@ export function AreaCandidato() {
                     </div>
                 </div>
 
-                <div className="w-full flex gap-3">
-                    <div className='flex-1'>
+                <div className="w-full flex flex-col md:flex-row gap-3">
+                    <div className='w-full md:flex-1'>
                         <label htmlFor="linkedin" className="text-sm font-semibold text-gray-700">
                             Linkedin
                         </label>
@@ -91,7 +91,7 @@ export function AreaCandidato() {
                         </div>
                     </div>
 
-                    <div className='flex-1'>
+                    <div className='w-full md:flex-1'>
                         <label htmlFor="github" className="text-sm font-semibold text-gray-700">
                             GitHub
                         </label>
@@ -103,8 +103,8 @@ export function AreaCandidato() {
                     </div>
                 </div>
 
-                <div className="w-full flex gap-3">
-                    <div className='w-4/5'>
+                <div className="w-full flex flex-col md:flex-row gap-3">
+                    <div className='w-full md:w-4/5'>
                         <label htmlFor="cargo" className="text-sm font-semibold text-gray-700">
                             Cargo/Objetivo
                         </label>
@@ -115,7 +115,7 @@ export function AreaCandidato() {
                         </div>
                     </div>
 
-                    <div className="w-1/5">
+                    <div className="w-full md:w-1/5">
                         <label htmlFor="status" className="text-sm font-semibold text-gray-700">
                             Nível de experiência
                         </label>
@@ -137,12 +137,12 @@ export function AreaCandidato() {
                         value={resumo} onChange={(e) => setResumo(e.target.value)} />
                 </div>
 
-                <div className='w-4/5'>
+                <div className='w-full md:w-4/5'>
                     <label className="text-sm font-semibold text-gray-700">Habilidades/Tecnologias</label>
                     <TagInput />
                 </div>
 
-                <div className="flex flex-col gap-1 ml-auto">
+                <div className="w-full md:w-auto flex flex-col gap-1 md:ml-auto">
                     <button
                         type="button"
                         className="h-10 px-6 rounded-lg bg-indigo-600 text-white font-semibold

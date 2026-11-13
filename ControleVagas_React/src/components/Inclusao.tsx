@@ -18,15 +18,15 @@ export function MenuInclusao() {
     const [canalFonte, setCanalFonte] = useState('');
     const [observacoes, setObservacoes] = useState('');
     const [endereco, setEndereco] = useState('');
-    
+
     return (
         <div className={styles.card}>
             <h2 className="text-2xl font-bold mb-6">Inclusão de candidatura</h2>
 
             <div className="flex flex-wrap items-end gap-3">
 
-                <div className="w-full flex gap-3">
-                    <div className='flex-1'>
+                <div className="w-full flex flex-col md:flex-row gap-3">
+                    <div className='w-full md:flex-1'>
                         <label htmlFor="descricaoVaga" className="text-sm font-semibold text-gray-700">
                             Descrição da vaga
                         </label>
@@ -37,7 +37,7 @@ export function MenuInclusao() {
                         </div>
                     </div>
 
-                    <div className='flex-1'>
+                    <div className='w-full md:flex-1'>
                         <label htmlFor="nomeEmpresa" className="text-sm font-semibold text-gray-700">
                             Nome da empresa
                         </label>
@@ -48,8 +48,8 @@ export function MenuInclusao() {
                         </div>
                     </div>
                 </div>
-                
-                <div className="w-1/5">
+
+                <div className="w-full md:w-1/5">
                     <label htmlFor="dtCandidatura" className="text-sm font-semibold text-gray-700">
                         Data de candidatura
                     </label>
@@ -60,7 +60,7 @@ export function MenuInclusao() {
                     </div>
                 </div>
 
-                <div className="w-1/5">
+                <div className="w-full md:w-1/5">
                     <label htmlFor="status" className="text-sm font-semibold text-gray-700">
                         Status da vaga
                     </label>
@@ -73,7 +73,7 @@ export function MenuInclusao() {
                     </select>
                 </div>
 
-                <div className="w-1/5">
+                <div className="w-full md:w-1/5">
                     <label htmlFor="meioContato" className="text-sm font-semibold text-gray-700">
                         Meio de contato
                     </label>
@@ -84,7 +84,7 @@ export function MenuInclusao() {
                     </select>
                 </div>
 
-                <div className="w-1/5">
+                <div className="w-full md:w-1/5">
                     <label htmlFor="modalidade" className="text-sm font-semibold text-gray-700">
                         Modalidade
                     </label>
@@ -97,8 +97,8 @@ export function MenuInclusao() {
                     </select>
                 </div>
 
-                <div className="w-full flex gap-3">
-                    <div className="w-1/5">
+                <div className="w-full flex flex-col md:flex-row gap-3">
+                    <div className="w-full md:w-1/5">
                         <label htmlFor="difSalario" className="text-sm font-semibold text-gray-700">
                             Salário proposto (opcional)
                         </label>
@@ -109,22 +109,22 @@ export function MenuInclusao() {
                         </div>
                     </div>
 
-                    <div className="w-1/5">
+                    <div className="w-full md:w-1/5">
                         <label htmlFor="canalFonte" className="text-sm font-semibold text-gray-700">
                             Canal/Fonte (opcional)
                         </label>
                         <input id="canalFonte" type="text" placeholder="ex: Linkedin, Indeed, etc"
-                                className='w-full'
-                                value={canalFonte} onChange={(e) => setCanalFonte(e.target.value)} />
+                            className='w-full'
+                            value={canalFonte} onChange={(e) => setCanalFonte(e.target.value)} />
                     </div>
 
-                    <div className="w-3/5">
+                    <div className="w-full md:w-3/5">
                         <label htmlFor="endereco" className="text-sm font-semibold text-gray-700">
                             Endereço da empresa
                         </label>
                         <input id="endereco" type="text"
-                                className='w-full'
-                                value={endereco} onChange={(e) => setEndereco(e.target.value)} />
+                            className='w-full'
+                            value={endereco} onChange={(e) => setEndereco(e.target.value)} />
                     </div>
                 </div>
 
@@ -133,20 +133,20 @@ export function MenuInclusao() {
                         Observações adicionais
                     </label>
                     <textarea id="observacoes" className='w-full' rows={3}
-                            value={observacoes} onChange={(e) => setObservacoes(e.target.value)} />
+                        value={observacoes} onChange={(e) => setObservacoes(e.target.value)} />
                 </div>
 
-                <div className='w-4/5'>
+                <div className='w-full md:w-4/5'>
                     <label className="text-sm font-semibold text-gray-700">Requisitos</label>
-                    <TagInput/>
+                    <TagInput />
                 </div>
 
-                <div className="flex flex-col gap-1 ml-auto">
+                <div className="w-full md:w-auto flex flex-col gap-1 md:ml-auto">
                     <button
                         type="button"
                         className="h-10 px-6 rounded-lg bg-indigo-600 text-white font-semibold
                                         hover:bg-indigo-700 active:scale-95 transition cursor-pointer"
-                        // onClick={() => console.log({ dataInicial, dataFinal, tipo })}
+                    // onClick={() => console.log({ dataInicial, dataFinal, tipo })}
                     >
                         Incluir
                     </button>
