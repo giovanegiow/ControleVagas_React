@@ -10,9 +10,9 @@ export function MenuPrincipal() {
     return (
         <div className={styles.bodyMenuPrincipal}>
             <div className={styles.divBtn}>
-                <button className={styles.btn} onClick={() => setAcao("selecionar")}>Selecionar candidaturas</button>
-                <button className={styles.btn} onClick={() => setAcao("incluir")}>Incluir candidatura</button>
-                <button className={styles.btn} onClick={() => setAcao("area")}>Área do candidato</button>
+                <button className={`${styles.btn} w-full md:w-auto`} onClick={() => setAcao("selecionar")}>Selecionar candidaturas</button>
+                <button className={`${styles.btn} w-full md:w-auto`} onClick={() => setAcao("incluir")}>Incluir candidatura</button>
+                <button className={`${styles.btn} w-full md:w-auto`} onClick={() => setAcao("area")}>Área do candidato</button>
             </div>
 
             <br></br>
